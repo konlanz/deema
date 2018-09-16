@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mums</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/main.css" />
+ 		<!-- Bootstrap -->
+ 	<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.css"/>
+</head>
+<body class="container-fluid">
+    <header>
+        <ul class="headli">
+            <a href="/user"><li>Home</li>
+            </a>
+            <div class="rig">
+              <li><a href="/logout">Logout</a></li>
+                        
+            </div>
+        </ul>
+    </header>
+
+<div class="row">
+    <div class="col-sm-12">
+            
+        <div class="mainorder">
+            <form method="POST" action="/users/palaceorder">    
+         
+            <img src="../uploads/<%=madp.photo%>" alt ="" class="images" alt=" "/>
+            <%=madp.name%>
+            <%=madp.qty%>X
+            <%=madp.price%>GH$
+            <input type="hidden" name="mprod" value="<%=madp.name%>"/>
+            <input type="hidden" name="mqty" value="<%=madp.qty%>"/>
+          
+            <div class="prdorder">
+                <%cart.forEach(function(item){%>
+                    <div class="prog">
+                     <img src="../uploads/<%=item.photo%>" alt ="" class="smallimage" alt=" "/>
+                     <%=item.name%>
+                     <%=item.qty%>X
+                     <%=item.price%>Gh$
+                    </div>
+                <input type="hidden" name="sprod" value="<%=item.name%>" />   
+                <input type="hidden" name="sqty" value="<%=item.qty%>" />    
+                
+                <%});%>
+               <strong>Total</strong>= <%=total%>GH$
+
+               <input type="hidden" name="tot" value="<%=total%>"/>
+                <button class="btn">PLace Order</button>
+            </div>
+            </form>
+        </div>
+
+        
+    </div>
+
+</div>
+<h4>TOPPINGS</h4>
+    <div class="row">
+        
+            <%datat.forEach(function(item){%>
+        <div class="col-sm-4">
+            
+                    
+         <ul> 
+
+            
+            
+                    <form method="POST" action="/users/add"> 
+                        <li><img src="../uploads/<%=item.prodimage%>" alt ="" class="img-fluid"/>
+                        <input type="hidden" name="prod" value="<%=item.prodname%>"/>
+                        
+                        <button class="btn-check">
+                            <%=item.prodprice%>GH$<br/>
+                            <%=item.prodname%><br>
+                          
+                        </button></li>
+                    </form>
+            
+         </ul>
+         
+        </div>
+               
+        <%});%>
+         
+    </div>
+    
+    
+
+</body>
+<script src="/javascripts/jquery-3.3.1.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/main.js"></script>  
+</body>
+</html>

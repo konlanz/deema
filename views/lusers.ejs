@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/main.css" />
+    <link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.css"/>
+
+    <title>List Of Users</title>
+</head>
+<body>
+        <header>
+                <ul class="headli">
+                    <a href="/admin/panel"><li>Home</li></a>
+                    <div class="rig">
+                      <li><a href="/admin/logout">Logout</a></li>
+                      <li>My Account</li>
+                                
+                    </div>
+                </ul>
+            </header>
+        <div class="container-fluid">    
+      <h1>The List Of Registered Users</h1>   
+           
+    <div class="table-responsive">
+
+        <table class="table table-striped">
+
+          <thead>
+            <tr>
+              <th>Names</th>
+              <th>Username</th>
+              <th>Phone</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%data.forEach(function(item){%>   
+                           
+            <tr>
+              <td><%=item.name%></td>
+              <td><%=item.username%></td>
+              <td><%=item.phone%></td>
+              <td><%=item.location%></td>
+            </tr>
+            <%}); %>
+          </tbody>
+        </table>
+      </div>     
+    </div>
+</body>
+</html>

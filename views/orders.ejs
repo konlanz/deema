@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/bootstrap.css" />
+</head>
+<body class="container-fluid">
+        <header>
+                <ul class="headli">
+                    <a href="/admin/panel"><li>Home</li></a>
+                    <div class="rig">
+                      <li><a href="/admin/logout">Logout</a></li>
+                        <li class="fa fa-user-o">My Account</li>
+                        
+                    </div>
+                </ul>
+            </header>
+    
+    
+    <div class="row">
+    </div>
+      
+    <div class="table-responsive">
+
+            <table class="table table-striped">
+
+              <thead>
+                <tr>
+                  <th>Names</th>
+                  <th>Products Orded</th>
+                  <th>Quantity Orded</th>
+                  <th>Total amount Orded</th>
+                  <th>Phone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%data.forEach(function(item){%>   
+                               
+                <tr>
+                  <td><%=item.name%></td>
+                  <td><%=item.mprod%> <%=item.sprod%></td>
+                  <td><%=item.mqty%> <%=item.sqty%></td>
+                  <td><%=item.total%></td>
+                  <td><%=item.phone%></td>
+                </tr>
+                <%}); %>
+              </tbody>
+            </table>
+    </div>     
+
+    
+</body>
+</html>

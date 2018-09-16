@@ -1,0 +1,31 @@
+{
+  "name": "mom",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "compression": "^1.7.3",
+    "connect-flash": "*",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "csurf": "^1.9.0",
+    "debug": "~2.6.9",
+    "ejs": "*",
+    "express": "~4.16.0",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "helmet": "*",
+    "http-errors": "~1.6.2",
+    "mongodb": "*",
+    "mongoose": "*",
+    "morgan": "~1.9.0",
+    "multer": "*",
+    "nodemon": "*",
+    "npm": "^6.4.1",
+    "safe-regex": "^1.1.0",
+    "save": "^2.3.2"
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/bootstrap.css" />
+</head>
+<body class="container-fluid">
+    <h1>Welcome to </h1><br>
+    <h4>Mums Breakfast</h4><br>
+    <h4> Login page</h4><br>
+    <div class="limit">
+        <form action="/users/login" method="POST">
+            <div class="space">
+                <input type="text" name="uname" placeholder="username" class="input"/>
+            </div>
+           
+            <div class="space">
+             <input type="password" name="password" placeholder="password" class="input"/>
+            </div>
+            <div class="space">
+                <input type="submit" class="btnlogin" value="Login"/>
+            </div>
+            <a href="/signup">signup</a> To create An Account.
+        </form>
+    </div>
+</body>
+</html>

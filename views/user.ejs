@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mom's Breakfast</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/bootstrap.css" />
+</head>
+<body>
+        <header>
+                <ul class="headli">
+                    <li><a href="/user">Home</a></li>
+                    <div class="rig">
+                        <li><a href="/logout">Logout</a></li>
+                        
+                    </div>
+                </ul>
+        </header>
+<div class="container-fluid">
+    <div class="row">
+        <button class="btnprv">See Previous Orders</button>
+        <div class="toga" >
+    
+           <%data.forEach(function(item){%>
+              <div class="porder">
+                <%=item.mprod%>
+                <%=item.sprod%>
+              </div>
+            <%});%>
+
+        </div>
+    </div>
+    <div class="row">
+        <%dat.forEach(function(item){%>
+            <div class="col-md-4">
+             <form method="POST" action="/shop">
+                <div class="image">
+    
+                 <img src="/uploads/<%=item.prodimage%>" class="img-fluid" alt=""/> 
+                 <strong><%=item.prodname %></strong><br>
+                 <strong>GH$<%=item.prodprice %></strong>
+                 <input type="hidden" name="prod" value="<%=item.prodname %>"/>
+                 <button class="btn">Shop</button>
+                </div>
+             </form>  
+            </div>
+        <%}); %> 
+            
+    </div>
+</div>
+
+          
+ <!-- jQuery Plugins -->
+ <script src="/javascripts/jquery-3.3.1.js"></script>
+<script src="javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/main.js"></script>
+</body>
+</html>

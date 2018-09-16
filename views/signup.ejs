@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/boostrap.css" />
+</head>
+<body>
+    <h1>Please Sign Up With Mom's Breakfast</h1>
+<%-messages()%>
+    <div class="limit">
+       <div class="loginflex">
+        <form method="POST" action="/users/adduser">
+         <div class="space"></div>
+         <input class="input" type="text" name="name" placeholder="Full Name"/>
+         <div class="space"></div>
+         <input class="input" type="text" name="uname" placeholder="Username"/>
+         <div class="space"></div>
+         <input type="tel" class="input" name="uphone" placeholder="Phone"/>
+         <div class="space"></div>
+         <input type="text" class="input" name="location" placeholder="Location Eg Unity Hall"/>
+         <div class="space"></div>
+
+         <input type="password" class="input" name="password" placeholder="Password"/>
+         <div class="space"></div>
+         <button class="btnlogin">Sign Up</button>
+         
+        </form>
+      </div>
+    </div>
+</body>
+</html>
