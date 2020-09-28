@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "compression": "^1.7.3",
@@ -16,8 +18,8 @@
     "express": "~4.16.0",
     "express-messages": "*",
     "express-session": "*",
-    "express-validator": "*",
-    "helmet": "*",
+    "express-validator": "6.0.0",
+    "helmet": "3.21.1",
     "http-errors": "~1.6.2",
     "mongodb": "*",
     "mongoose": "*",
@@ -26,6 +28,8 @@
     "nodemon": "*",
     "npm": "^6.14.6",
     "safe-regex": "^1.1.0",
-    "save": "^2.3.2"
-  }
+    "save": "^2.3.2",
+    "snyk": "^1.402.0"
+  },
+  "snyk": true
 }
