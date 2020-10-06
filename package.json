@@ -21,7 +21,7 @@
     "express-validator": "6.0.0",
     "helmet": "3.23.3",
     "http-errors": "~1.6.2",
-    "mongodb": "*",
+    "mongodb": "3.6.1",
     "mongoose": "*",
     "morgan": "~1.9.1",
     "multer": "*",
