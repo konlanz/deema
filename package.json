@@ -19,7 +19,7 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "6.0.0",
-    "helmet": "3.21.1",
+    "helmet": "3.23.3",
     "http-errors": "~1.6.2",
     "mongodb": "*",
     "mongoose": "*",
