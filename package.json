@@ -17,7 +17,7 @@
     "ejs": "*",
     "express": "~4.16.0",
     "express-messages": "*",
-    "express-session": "*",
+    "express-session": "1.17.1",
     "express-validator": "6.0.0",
     "helmet": "3.23.3",
     "http-errors": "~1.6.2",
