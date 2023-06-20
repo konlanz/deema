@@ -20,7 +20,7 @@
     "express-session": "1.17.2",
     "express-validator": "6.12.1",
     "helmet": "3.23.3",
-    "http-errors": "~1.8.0",
+    "http-errors": "~1.8.1",
     "mongodb": "3.7.3",
     "mongoose": "6.4.6",
     "morgan": "~1.10.0",
